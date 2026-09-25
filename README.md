@@ -2,7 +2,13 @@
 
 Welcome to the official support repository for **Swagra**.
 
-Swagra is a modern Chrome extension that helps developers import, explore, and test OpenAPI and Swagger API specifications directly from the browser.
+Swagra is a Chrome extension for exploring, testing, comparing, and mocking OpenAPI and Swagger APIs directly in your browser.
+
+- **Explore:** browse endpoints and schemas, and send live requests with "Try it out"
+- **API Client:** collections, environments and variables, history, cookies, and automatic token refresh. Supports HTTP, GraphQL, WebSocket, Server-Sent Events, and Socket.IO
+- **API Diff:** compare two specs to see what changed
+- **Mock Studio:** generate mock data from schemas
+- **Backup:** export your whole workspace to a file and import it again later
 
 This repository is the central place for:
 
@@ -65,15 +71,21 @@ You can import:
 - JSON files
 - YAML files
 - Remote URLs
-- Raw specification content
+- Pasted specification content
+
+You can also bring in existing requests from Postman collections, cURL commands, or HAR files.
 
 ### Does Swagra collect my API data?
 
 No.
 
-Swagra is designed to work locally in your browser. Any network requests are performed only as required to fetch specifications or send API requests that you explicitly initiate.
+Swagra runs entirely in your browser and has no backend. Your specs, collections, environments, and settings are stored only on your device. Network requests go only to addresses you choose, such as a spec URL you import or an API you send a request to.
 
-Please refer to the Privacy Policy for more information.
+Please refer to the [Privacy Policy](PRIVACY.MD) for more information.
+
+### Why does Swagra need access to all sites?
+
+Swagra is an API client, and the APIs you call can be on any host. Host access lets it send the requests you start to that API without being blocked by CORS. Swagra never injects scripts into web pages or reads your browsing data.
 
 ---
 
@@ -93,6 +105,6 @@ Thank you for using Swagra ❤️
 
 ## Useful Links
 
-### Documentation
-
-Coming Soon
+- [Documentation](https://swagra.vercel.app/#/docs)
+- [Privacy Policy](PRIVACY.MD)
+- [Report an issue](https://github.com/shahid-shafi/swagra-issues/issues/new)
